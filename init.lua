@@ -43,4 +43,4 @@ keymap("n", "m3", ":lua require('harpoon.ui').nav_file(3)<CR>", opts)
 keymap("n", "m4", ":lua require('harpoon.ui').nav_file(4)<CR>", opts)
 
 -- Remove annoyances
-keymap("n", "no", "<cmd>noh<cr>", opts)
+keymap("n", "mo", "<cmd>noh<cr>", opts)
