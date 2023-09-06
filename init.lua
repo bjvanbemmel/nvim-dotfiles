@@ -6,7 +6,7 @@ vim.o.expandtab = true
 vim.o.smartindent = true
 vim.o.mouse = ""
 
-require('packer-plugins')
+require("lazy-plugins")
 
 -- Keybinds
 
