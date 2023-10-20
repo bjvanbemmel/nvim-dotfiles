@@ -1,4 +1,6 @@
--- Add page numbers
+vim.keymap.set("n", " ", "<Noh>")
+vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>hw", ":lua print('Hello, World!')<CR>")
 vim.o.relativenumber = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
@@ -13,6 +15,14 @@ require("lazy-plugins")
 local opts = { noremap = true, silent = true }
 
 local keymap = vim.api.nvim_set_keymap
+
+keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+keymap("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+keymap("n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -45,3 +55,5 @@ keymap("n", "m4", ":lua require('harpoon.ui').nav_file(4)<CR>", opts)
 
 -- Remove annoyances
 keymap("n", "mo", "<cmd>noh<cr>", opts)
+
+keymap("n", "K", ":lua vim.lsp.buf.hover()<CR>", opts)
