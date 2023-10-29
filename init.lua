@@ -31,14 +31,13 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Nvim Tree binds
-keymap("n", "<C-b>", ":NvimTreeToggle<CR>", opts)
-keymap("n", "<C-S-p>", ":NvimTreeFocus<CR>", opts)
+keymap("n", "<leader>b", ":NvimTreeToggle<CR>", opts)
 
 keymap("n", "<C-_>", ":CommentToggle<CR>", opts)
 keymap("v", "<C-_>", ":CommentToggle<CR>", opts)
 
 -- Telescope binds
-keymap("n", "<C-p>", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown())<cr>", opts)
+keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown())<cr>", opts)
 keymap('n', "<C-[>", "<cmd>lua require'telescope.builtin'.lsp_references()<CR>", opts)
 
 -- Show all diagnostics on current line in floating window
