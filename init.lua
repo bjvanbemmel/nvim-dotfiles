@@ -37,6 +37,7 @@ keymap("v", "<C-_>", ":CommentToggle<CR>", opts)
 
 -- Telescope binds
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown())<cr>", opts)
+keymap("n", "<leader>g", "<cmd>lua require'telescope.builtin'.live_grep(require('telescope.themes').get_dropdown())<cr>", opts)
 keymap('n', "<C-[>", "<cmd>lua require'telescope.builtin'.lsp_references()<CR>", opts)
 
 -- Show all diagnostics on current line in floating window
